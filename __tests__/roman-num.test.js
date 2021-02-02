@@ -13,4 +13,8 @@ describe('toRoman', () => {
   test("should correctly convert '3' to 'III'", () => {
     expect(toRoman(3)).toEqual('III');
   });
+
+  test("should correctly convert '4' to 'IV", () => {
+    expect(toRoman(4)).toEqual('IV');
+  });
 });
