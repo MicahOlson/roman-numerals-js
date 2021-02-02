@@ -17,4 +17,8 @@ describe('toRoman', () => {
   test("should correctly convert '4' to 'IV", () => {
     expect(toRoman(4)).toEqual('IV');
   });
+  
+  test("should correctly convert '3998' to 'MMMCMXCVIII", () => {
+    expect(toRoman(3998)).toEqual('MMMCMXCVIII');
+  });
 });
