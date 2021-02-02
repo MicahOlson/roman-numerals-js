@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1612296095043" clover="3.2.0">
-  <project timestamp="1612296095043" name="All files">
-    <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1" elements="1" coveredelements="1" complexity="0" loc="0" ncloc="0" packages="1" files="1" classes="1"/>
-    <file name="roman-num.js" path="/Users/Micah/projects/roman-numerals/src/roman-num.js">
-      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+<coverage generated="1612307357447" clover="3.2.0">
+  <project timestamp="1612307357447" name="All files">
+    <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2" elements="8" coveredelements="8" complexity="0" loc="6" ncloc="6" packages="1" files="1" classes="1"/>
+    <file name="roman-num.js" path="/Users/Luise/Desktop/roman-numerals/src/roman-num.js">
+      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="20" count="5" type="stmt"/>
+      <line num="22" count="5" type="stmt"/>
+      <line num="23" count="65" type="stmt"/>
+      <line num="24" count="16" type="stmt"/>
+      <line num="27" count="5" type="stmt"/>
     </file>
   </project>
 </coverage>
