@@ -9,9 +9,8 @@ export default function toRoman(num) {
   let romanNum = "";
 
   numerals.forEach(function(item) {
-    while (num >= item.value) {
+    for (; num >= item.value; num -= item.value) {
       romanNum += item.numeral;
-      num -= item.value;
     }
   });
   return romanNum;
