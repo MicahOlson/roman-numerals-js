@@ -6,34 +6,34 @@ module.exports = {
   entry: './src/main.js',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
   },
   devtool: 'eval-source-map',
   devServer: {
-    contentBase: './dist'
+    static: './dist',
   },
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'Roman Numerals',
       template: './src/index.html',
-      inject: 'body'
-    })
+      inject: 'body',
+    }),
   ],
   module: {
     rules: [
       {
-        test: /\.css$/,
-        use: [
-          'style-loader',
-          'css-loader'
-        ]
+        test: /\.(png|svg|jpe?g|gif)$/i,
+        type: 'asset/resource',
       },
       {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: "eslint-loader"
-      }
-    ]
-  }
+        test: /\.html$/,
+        use: ['html-loader'],
+      },
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
+    ],
+  },
 };
