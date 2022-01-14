@@ -15,12 +15,16 @@ const numerals = [
 ]
 
 export default function toRoman(num) {
-  let result = "";
-
-  numerals.forEach(function(item) {
-    for (; num >= item.value; num -= item.value) {
-      result += (item.numeral);
+  if (typeof num !== 'number') {
+    return "Argument must be an integer greater than zero.";
+  }
+  if (num < 1) {
+    return "";
+  } else {
+    for (let i = 0; i < numerals.length; i++) {
+      if (num >= numerals[i].value) {
+        return numerals[i].numeral + toRoman(num - numerals[i].value);
+      }
     }
-  });
-  return result;
+  }
 }

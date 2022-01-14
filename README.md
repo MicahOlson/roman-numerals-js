@@ -1,29 +1,28 @@
-// dictionary: M=1000, CM=900, D=500, CD=400, C=100, XC=90, L=50, XL=40, X=10, IX=9, V=5, IV=4, I=1
+# Roman Numerals Recursion
 
+### _This project was created solely for the education of the author(s) and is not in a complete or portfolio-ready state. It should not be considered representative of professional work._
+\
+[Epicodus](https://www.epicodus.com/) > [React](https://www.learnhowtoprogram.com/react) > [Week 1, Lesson 19](https://www.learnhowtoprogram.com/react/functional-programming-with-javascript/coin-counter-sieve)  
+\
+Date created: 2021-04-12
 
+## Authors and Contributors
+Authored by: Nick Lindau, Micah L. Olson
 
-describe: isRomanNumeral() Test: "It determines if input is a number" Expect (isRomanNumeral(& LOL *$)).toEqual(false);
+## Description
+_React > Functional Programming with JavaScript > Coin Counter, Sieve > Roman Numerals_  
+The goal of this exercise is to get comfortable with the basics of functional programming by practicing writing pure functions, closures, curried functions, and recursive functions.
 
-Test: "Program limits input of number to be <= 3999" Expect (isRomanNumeral(4000)).toEqual(false);
+## Technologies Used
+* JavaScript
+* Jest
+* Node
+* npm
 
-Test: "It recognizes single digits" Expect (toRomanNumeral(9)).toEqual(ones);
+## License
+[GPLv3](https://choosealicense.com/licenses/gpl-3.0/)\
+Copyright &copy; 2021 Nick Lindau, Micah L. Olson
 
-Test: "It recognizes double digits" Expect (toRomanNumeral(10)).toEqual(tens);
-
-Test: "It recognizes triple digits" Expect (toRomanNumeral(100)).toEqual(hundred);
-
-Test: "It recognizes quadrouple digits" Expect (toRomanNumeral(1000)).toEqual(thousands);
-
-Test: "It recognizes more than three of the same characters in a row" Expect (isRomanNumeral(IIII)).toEqual(false);
-
-Test: "It recognizes ones, tens, hundreds, and thousands have to be seperate" Expect (toRomanNumeral(99)).toEqual(ICIX);
-
-Test: "It recognizes the digits V, L, and D are never repeated" Expect (isRomanNumeral(VV)).toEqual(false);
-
-describe: toRomanNumeral() Test: "It converts numbers to their corresponding Roman Numeral symbols" Expect (toRomanNumeral(1)).toEqual(I);
-
-Test: "It adds the values of all the converted symbols" Expect (toRomanNumeral(2)).toEqual(II);
-
-Test: "It adds the values of more than three of the same characters in a row plus one additional of the repeated character" Expect (toRomanNumeral(IIII)).toEqual(V);
-
-Test: "Program will switch to subtraction when equal to false and subtract one of the repeated numeral" Expect (isRomanNumeral(false)).toEqual(--);
+## Contact
+nicholaithegreat@gmail.com  
+micah.olson@protonmail.com

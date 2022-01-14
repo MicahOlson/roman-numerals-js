@@ -1,5 +1,5 @@
 {
-  "name": "roman-numerals-js-nonrecursive",
+  "name": "roman-numerals-js-recursive",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
