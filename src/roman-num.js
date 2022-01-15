@@ -15,10 +15,14 @@ const numerals = [
 ];
 
 export default function toRoman(num) {
-  if (typeof num !== 'number' || num !== parseInt(num, 10) || num < 0 || num > 3999) {
+  if (
+    typeof num !== 'number' ||
+    num !== parseInt(num, 10) ||
+    num < 0 ||
+    num > 3999
+  ) {
     return null;
-  }
-  if (num === 0) {
+  } else if (num === 0) {
     return '';
   } else {
     for (let i = 0; i < numerals.length; i++) {
