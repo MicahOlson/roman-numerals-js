@@ -1,29 +1,29 @@
 const numerals = [
-  {value: 1000, numeral: "M"},
-  {value: 900, numeral: "CM"},
-  {value: 500, numeral: "D"},
-  {value: 400, numeral: "CD"},
-  {value: 100, numeral: "C"},
-  {value: 90, numeral: "XC"},
-  {value: 50, numeral: "L"},
-  {value: 40, numeral: "XL"},
-  {value: 10, numeral: "X"},
-  {value: 9, numeral: "IX"},
-  {value: 5, numeral: "V"},
-  {value: 4, numeral: "IV"},
-  {value: 1, numeral: "I"}
-]
+  { arabic: 1000, roman: 'M' },
+  { arabic: 900, roman: 'CM' },
+  { arabic: 500, roman: 'D' },
+  { arabic: 400, roman: 'CD' },
+  { arabic: 100, roman: 'C' },
+  { arabic: 90, roman: 'XC' },
+  { arabic: 50, roman: 'L' },
+  { arabic: 40, roman: 'XL' },
+  { arabic: 10, roman: 'X' },
+  { arabic: 9, roman: 'IX' },
+  { arabic: 5, roman: 'V' },
+  { arabic: 4, roman: 'IV' },
+  { arabic: 1, roman: 'I' },
+];
 
 export default function toRoman(num) {
   if (typeof num !== 'number') {
-    return "Argument must be an integer greater than zero.";
+    return null;
   }
   if (num < 1) {
-    return "";
+    return '';
   } else {
     for (let i = 0; i < numerals.length; i++) {
-      if (num >= numerals[i].value) {
-        return numerals[i].numeral + toRoman(num - numerals[i].value);
+      if (num >= numerals[i].arabic) {
+        return numerals[i].roman + toRoman(num - numerals[i].arabic);
       }
     }
   }
