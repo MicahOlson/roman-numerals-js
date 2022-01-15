@@ -28,4 +28,8 @@ describe('toRoman', () => {
   test('should return null if the argument is not an integer', () => {
     expect(toRoman(1.5)).toBeNull();
   });
+
+  test('should return null if the argument is less than 0', () => {
+    expect(toRoman(-1)).toBeNull();
+  });
 });
