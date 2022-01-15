@@ -1,18 +1,18 @@
-const numerals = [
-  { arabic: 1000, roman: 'M' },
-  { arabic: 900, roman: 'CM' },
-  { arabic: 500, roman: 'D' },
-  { arabic: 400, roman: 'CD' },
-  { arabic: 100, roman: 'C' },
-  { arabic: 90, roman: 'XC' },
-  { arabic: 50, roman: 'L' },
-  { arabic: 40, roman: 'XL' },
-  { arabic: 10, roman: 'X' },
-  { arabic: 9, roman: 'IX' },
-  { arabic: 5, roman: 'V' },
-  { arabic: 4, roman: 'IV' },
-  { arabic: 1, roman: 'I' },
-];
+const numerals = {
+  M:  1000,
+  CM: 900,
+  D:  500,
+  CD: 400,
+  C:  100,
+  XC: 90,
+  L:  50,
+  XL: 40,
+  X:  10,
+  IX: 9,
+  V:  5,
+  IV: 4,
+  I:  1
+};
 
 export default function toRoman(num) {
   if (
@@ -25,9 +25,9 @@ export default function toRoman(num) {
   } else if (num === 0) {
     return '';
   } else {
-    for (let i = 0; i < numerals.length; i++) {
-      if (num >= numerals[i].arabic) {
-        return numerals[i].roman + toRoman(num - numerals[i].arabic);
+    for (const [roman, arabic] of Object.entries(numerals)) {
+      if (num >= arabic) {
+        return roman + toRoman(num - arabic);
       }
     }
   }
