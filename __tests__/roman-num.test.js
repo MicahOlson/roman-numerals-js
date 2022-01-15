@@ -36,4 +36,8 @@ describe('toRoman', () => {
   test('should return null if the argument is greater than 3999', () => {
     expect(toRoman(4000)).toBeNull();
   });
+
+  test('should return an empty string for 0', () => {
+    expect(toRoman(0)).toBe('');
+  });
 });
