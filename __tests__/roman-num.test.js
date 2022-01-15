@@ -24,4 +24,8 @@ describe('toRoman', () => {
   test('should return null if the argument is not a number', () => {
     expect(toRoman('one')).toBeNull();
   });
+
+  test('should return null if the argument is not an integer', () => {
+    expect(toRoman(1.5)).toBeNull();
+  });
 });

@@ -15,7 +15,7 @@ const numerals = [
 ];
 
 export default function toRoman(num) {
-  if (typeof num !== 'number') {
+  if (typeof num !== 'number' || num !== parseInt(num, 10)) {
     return null;
   }
   if (num < 1) {
